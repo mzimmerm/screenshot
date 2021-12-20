@@ -3,22 +3,32 @@ import 'package:integration_test/integration_test.dart' show IntegrationTestWidg
 
 import 'package:screenshot/main.dart' as app;
 
-/// Test taking a screenshot from a running Flutter app.
+/// Test taking a screenshot from a running Flutter app. 
+/// 
+/// Serves to duplicate an issue reported in https://github.com/flutter/flutter/issues/95540.
 /// 
 /// Part of a Github project https://github.com/mzimmerm/screenshot 
-/// which duplicates an issue reported on Flutter.
+/// which duplicates the Flutter issue number 95540.
 /// 
 /// # Issue description (tl;dr): 
-///   Presence of a directory named `example` on project top level causes to fail the `flutter drive ..` integration test.
-///   This is very specific to the directory name `example`. The contents of the directory does not matter - just 
+///   Presence of a directory named `example` on project top level causes the `flutter drive ..` integration test to fail.
+///   The integration test which fails 
+///   ```shell
+///     flutter drive --driver=test_driver/integration_test.dart --target=integration_test/screenshot_test.dart
+///   ```
+///   is the screenshot test created exactly by following instructions in 
+///     https://github.com/flutter/flutter/tree/master/packages/integration_test#integration_test. 
+///   The full description of how the project was created and how the test was run is below.
+///   The failure is very specific to the directory name `example`. The contents of the directory does not matter - just 
 ///   the presence of it Directories with other names do not cause this issue.
 ///   Worse, this failure prevents library projects to contain a example app, which by convention should be in a directory 
 ///   named `example`.
 /// 
 /// I created a project on Github  https://github.com/mzimmerm/screenshot 
-/// which can be used to duplicate the issue.
+/// which can be used to fully duplicate the issue.
 /// The project is a rudimentary Flutter example app created from command line,
-/// with added files `test_driver/integration_test.dart` and `integration_test/screenshot_test.dart`.
+/// with added files `test_driver/integration_test.dart` and `integration_test/screenshot_test.dart`
+/// described in https://github.com/flutter/flutter/tree/master/packages/integration_test#integration_test. 
 /// 
 /// # To duplicate the issue: 
 /// Install the duplication project from Github as follows:
