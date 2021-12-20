@@ -14,9 +14,6 @@ import 'package:screenshot/main.dart' as app;
 ///   the presence of it Directories with other names do not cause this issue.
 ///   Worse, this failure prevents library projects to contain a example app, which by convention should be in a directory 
 ///   named `example`.
-///   
-/// 
-/// 
 /// 
 /// I created a project on Github  https://github.com/mzimmerm/screenshot 
 /// which can be used to duplicate the issue.
