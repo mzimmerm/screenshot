@@ -6,7 +6,6 @@ Future<void> main() async {
     onScreenshot: (String screenshotName, List<int> screenshotBytes) async {
       final File image = File('$screenshotName.png');
       image.writeAsBytesSync(screenshotBytes);
-      // Return false if the screenshot is invalid.
       return true;
     },
   );
