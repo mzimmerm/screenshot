@@ -1,7 +1,6 @@
 # screenshot
 
-A new Flutter project.
-
+Purpose of this project is to document Flutter issue reported in https://github.com/flutter/flutter/issues/95540
 ## Getting Started
 
 This project is a starting point for a Flutter application.
